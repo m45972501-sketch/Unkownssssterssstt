@@ -1,0 +1,1 @@
+const {SlashCommandBuilder,EmbedBuilder}=require('discord.js');const data=new SlashCommandBuilder().setName('help').setDescription('قائمة الأوامر');async function execute(i,c){i.reply({embeds:[new EmbedBuilder().setTitle('Razen Help').setDescription([...c.commands.keys()].sort().map(x=>`/${x}`).join(' • ')).setFooter({text:'/help | 🇵🇸🇱🇧'})]})}module.exports={data,execute};
